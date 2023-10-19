@@ -2,7 +2,41 @@
 
 :root{
     --font-family: 'Poppins', sans-serif;
-    --bg-color: #A076F9;
+    --bg-color: rgb(2,0,36);
     --primary-color: #EDE4FF;
 }
 
+body{
+    font-family: var(--font-family);
+    color: var(--primary-color);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    background: fixed linear-gradient(140deg, rgba(2,0,36,1) 0%, rgba(160,118,249,1) 50%);
+}
+
+h1{
+    font-size: 5em;
+}
+
+h3{
+    font-size: 3em;
+    margin-top: 20px;
+}
+
+.mensagem{
+    font-size: 2.5em;
+    margin-top: 40px;
+}
+
+.box{
+    padding: 15px;
+    margin: 20px;
+    font-size: 4em;
+    display: inline-block;
+    border: 2px solid var(--primary-color);
+}
