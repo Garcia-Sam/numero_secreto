@@ -1,6 +1,21 @@
-window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+const elementoChute  =   document.getElementById("chute")
 
-const recognition = new SpeechRecognition();
+window.SpeechRecognition    =   window.SpeechRecognition || window.webkitSpeechRecognition;
 
-recognition.lang = 'pt-Br'
+const recognition   =   new SpeechRecognition();
+recognition.lang    =   'pt-Br'
 recognition.start()
+
+recognition.addEventListener('result', onSpeak)
+
+function    onSpeak(evento) {
+    chute   =   evento.results[0][0].transcript
+    exibeChuteNaTela(chute)
+}
+
+function    exibeChuteNaTela(chute){
+    elementoChute.innerHTML =   `
+    <div> Você disse </div>
+    <span class = 'box'> ${chute} </span>
+    `
+}
