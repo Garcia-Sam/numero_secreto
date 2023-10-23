@@ -9,6 +9,8 @@ function    verficaSeOChutePossuiUmValorValido(chute)    {
         elementoChute.innerHTML +=  `
         <div>Valor Inválido: 
         Fale um número entre ${menorValor} e ${maiorValor}.</div>
+        
+        <button  id='jogar-novamente'    class='btn-jogar'>Jogar Novamente.</button>
         `
     }
 
@@ -35,3 +37,9 @@ function    chuteForInvalido(numero) {
 function numeroForMaiorOuMenorQueOValorPermitido(numero){
     return numero   >   maiorValor  ||  numero  <   menorValor
 }
+
+document.body.addEventListener('click', e   => {
+    if  (e.target.id =='jogar-novamente'){
+        window.location.reload()
+    }
+})
